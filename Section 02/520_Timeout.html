@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Timeouts</title>
+</head>
+<body>
+
+    <h1>Timeouts</h1>
+
+    <script>
+
+        console.log("First console log")
+        setTimeout(function() {
+            console.log("Second console log: Time out!")
+            const body = document.querySelector("body")
+            body.style.backgroundColor = "blue"
+            body.style.color = "white"
+        }, 3000)
+        console.log("Third console log")
+
+    </script>
+
+    <!--
+        Teacher:    Kalob Taulien
+        Twitter:    @KalobTaulien
+        Website:    Codingforeverybody.com/javascript-for-beginners
+    -->
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Accepting User Input</title>
+</head>
+<body>
+
+    <h1>Your input is:</h1>
+    <h3 id="customInput">________</h3>
+
+
+    <script>
+
+        var name = prompt("What is your name?", "Kalob")
+        var h3Node = document.getElementById("customInput")
+        h3Node.innerText = name.toLowerCase()
+        console.log(name)
+
+    </script>
+
+    <!--
+        Teacher:    Kalob Taulien
+        Twitter:    @KalobTaulien
+        Website:    Codingforeverybody.com/javascript-for-beginners
+    -->
+</body>
+</html>

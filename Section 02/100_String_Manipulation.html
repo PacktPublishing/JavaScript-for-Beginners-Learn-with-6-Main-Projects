@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>String Manipulation</title>
+</head>
+<body>
+
+    <h1 id="sentence">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam laboriosam consequatur saepe. Repellat itaque dolores neque, impedit reprehenderit eum culpa voluptates harum sapiente nesciunt ratione.
+    </h1>
+
+
+    <script>
+
+    var sentenceNode = document.getElementById("sentence")
+    var sentence = sentenceNode.innerText
+
+    var upperSentence = sentence.toUpperCase()
+    var lowerSentence = sentence.toLowerCase()
+    var firstElevenChars = sentence.substr(0, 11)
+
+
+    var allWords = sentence.split(" ")
+    var bracketWords = "(" + allWords.join("") + ")"
+
+    var firstThreeWords = allWords.slice(0, 3)
+
+
+    var middleWords = allWords.slice(5, 10)
+    var makeSentence = middleWords.join(" ")
+
+    sentenceNode.innerText = makeSentence
+
+    </script>
+
+    <!--
+        Teacher:    Kalob Taulien
+        Twitter:    @KalobTaulien
+        Website:    Codingforeverybody.com/javascript-for-beginners
+    -->
+</body>
+</html>

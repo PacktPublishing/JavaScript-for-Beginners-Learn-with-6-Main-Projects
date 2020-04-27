@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Destructuring</title>
+</head>
+<body>
+
+    <h1>Destructuring</h1>
+
+    <script>
+
+        var arr = ["Kalob", "Nathan", "Zephyr", "Prairie", "Henry", "Veto", "Maya"]
+        // // const kalob = arr[0]
+        // // const nathan = arr[1]
+
+        // let [kalob, nathan, zephyr] = arr
+        let [kalob, nathan, zephyr, ...everyoneElse] = arr
+        // console.log(everyoneElse)
+
+        // var fullName = prompt("What is your FULL name?") // string
+        // Kalob Taulien
+        // let [firstName, lastName] = fullName.split(' ')
+        //     fullName = fullName.split(' ')
+        // const firstName = fullName[0]
+        // const lastName = fullName[1]
+
+        // console.log(firstName, " is the first name")
+        // console.log(lastName, " is the last name")
+
+
+        const person = {
+            "name": "DEFINITELY NOT KALOB",
+            'age': 30,
+            'cats': 2,
+            'food': 'pizza',
+            'color': 'red'
+        }
+
+        let {
+            // key: newVarNameIs
+            name,
+            food,
+            color = 'blue',
+        } = person
+        console.log("Name is ", name)
+        console.log("Favirote food is ", food)
+        console.log("Fav color ", color)
+        // const name = person.name
+        // const age = person.age
+        // const cats = person.cats
+
+
+    </script>
+
+    <!--
+        Teacher:    Kalob Taulien
+        Twitter:    @KalobTaulien
+        Website:    Codingforeverybody.com/javascript-for-beginners
+    -->
+
+</body>
+</html>

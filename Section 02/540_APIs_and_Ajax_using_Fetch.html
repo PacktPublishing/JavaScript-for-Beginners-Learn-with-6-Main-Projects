@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fetch</title>
+</head>
+<body>
+
+    <h1>Fetch</h1>
+
+    <script>
+
+        fetch('https://swapi.co/api/people/1/')
+            .then(function(response) {
+                return response.json()
+            })
+            .then(function(res) {
+                luke = res
+                // const [movie1, movie2, movie3, ...movies] = luke.films
+                // console.log(movie2)
+
+                luke.films.forEach(function(url, index) {
+                    console.log(index, url)
+                })
+            })
+
+    </script>
+
+    <!--
+        Teacher:    Kalob Taulien
+        Twitter:    @KalobTaulien
+        Website:    Codingforeverybody.com/javascript-for-beginners
+    -->
+
+</body>
+</html>

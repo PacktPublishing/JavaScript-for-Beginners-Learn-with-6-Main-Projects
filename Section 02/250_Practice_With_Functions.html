@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Practice With Functions</title>
+</head>
+<body>
+
+    <h1 id="title"></h1>
+
+    <script>
+
+        function doMath(num) {
+            num = Number(num);
+            if(num) {
+                // Is a real number
+                var newNumber = (num + 100) / 4;
+                return newNumber;
+            } else {
+                // Not a real number
+                return false;
+            }
+        }
+
+        var customNum = doMath("Kalob");
+        // console.log(customNum)
+
+        function $(id) {
+            console.log("Id is:", id);
+            return document.getElementById(id)
+        }
+
+        var title = $("title");
+        title.innerText = "Custom inner text"
+
+
+        // Celcius to fahrenheit
+        function cToF(c_num) {
+            return (c_num * 1.8) + 32;
+        }
+
+        var zero = cToF(0); console.log(zero);
+        var twenty = cToF(20); console.log(twenty);
+        var boiling = cToF(100); console.log(boiling);
+        var freezing = cToF(-40); console.log(freezing);
+
+
+        function name() {
+            return "return something"
+        }
+
+        var name = name()
+
+    </script>
+
+    <!--
+        Teacher:    Kalob Taulien
+        Twitter:    @KalobTaulien
+        Website:    Codingforeverybody.com/javascript-for-beginners
+    -->
+</body>
+</html>

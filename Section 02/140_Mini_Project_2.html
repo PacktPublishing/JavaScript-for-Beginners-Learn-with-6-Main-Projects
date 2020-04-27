@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Mini Project #2</title>
+</head>
+<body>
+
+    <p>
+        This is the link:
+        <span id="link"></span>
+    </p>
+
+    <script>
+        var url = prompt("Enter a URL");
+
+        if(url.substr(0, 4) == "http") {
+            console.log("Its good already")
+        } else {
+            url = "http://" + url
+        }
+
+        var spanNode = document.getElementById("link");
+        var html = "<a href='" + url + "'>" + url + "</a>"
+        spanNode.innerHTML = html;
+    </script>
+
+    <!--
+        Teacher:    Kalob Taulien
+        Twitter:    @KalobTaulien
+        Website:    Codingforeverybody.com/javascript-for-beginners
+    -->
+</body>
+</html>

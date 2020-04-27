@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Intervals</title>
+</head>
+<body>
+
+    <h1>Intervals</h1>
+
+    <script>
+
+        var logger = setInterval(function() {
+            console.log("I'm running")
+        }, 1000)
+
+        setTimeout(function() {
+            clearInterval(logger)
+        }, 5500)
+
+    </script>
+
+    <!--
+        Teacher:    Kalob Taulien
+        Twitter:    @KalobTaulien
+        Website:    Codingforeverybody.com/javascript-for-beginners
+    -->
+
+</body>
+</html>

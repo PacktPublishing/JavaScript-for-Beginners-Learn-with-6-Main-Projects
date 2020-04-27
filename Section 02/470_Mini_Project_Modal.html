@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>OOP Modal</title>
+    <style>
+    .modal {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        border: 1px solid black;
+        background-color: white;
+        box-shadow: 5px 5px #000;
+        width: 80%;
+        max-width: 800px;
+        padding: 20px;
+        transform: translate(-50%, -50%);
+        display:none;
+    }
+    </style>
+</head>
+<body>
+
+    <h1>OOP Modal</h1>
+
+    <ul>
+        <li>Create a button that will open a modal.</li>
+        <li>Create a button that will close a modal.</li>
+        <li>Write all of this inside of an Object or a Class, including the functions/methods.</li>
+    </ul>
+
+    <div class="modal js-modal">
+        <h1 class="js-modal-title">This is a modal</h1>
+        <p class="js-modal-text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores similique totam inventore ab nulla autem quasi cumque cum provident voluptatem nam itaque, debitis commodi saepe fugiat quos beatae dolor excepturi. Tempora laboriosam ad qui nihil iure explicabo, modi illo provident dolores. Vel numquam ut deleniti ducimus debitis nisi minus iusto?
+        </p>
+        <p>
+            <button class="js-close-modal">Close Modal</button>
+        </p>
+    </div>
+
+    <button class="js-open-modal">OPEN MODAL</button>
+
+
+
+
+    <script>
+
+        class Modal {
+            constructor() {
+                this.modal = document.querySelector(".js-modal")
+            }
+
+            open() {
+                this.modal.style.display = 'initial'
+            }
+
+            close() {
+                this.modal.style.display = 'none'
+            }
+
+            changeContent(title, text) {
+                if(title !== undefined) {
+                    this.modal.querySelector(".js-modal-title").innerText = title
+                }
+                if(text !== undefined) {
+                    this.modal.querySelector(".js-modal-text").innerText = text
+                }
+            }
+        }
+
+        const openBtn = document.querySelector(".js-open-modal")
+        const closeBtn = document.querySelector(".js-close-modal")
+        const modal = new Modal("New title", "New text in here")
+
+        openBtn.addEventListener('click', function(event) {
+            modal.open()
+        })
+
+        closeBtn.addEventListener('click', function(event) {
+            modal.close()
+        })
+
+    </script>
+
+    <!--
+        Teacher:    Kalob Taulien
+        Twitter:    @KalobTaulien
+        Website:    Codingforeverybody.com/javascript-for-beginners
+    -->
+
+</body>
+</html>

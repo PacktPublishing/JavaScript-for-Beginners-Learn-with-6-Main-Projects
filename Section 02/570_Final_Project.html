@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Final Project</title>
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f5f5f5;
+            text-align: center;
+        }
+
+        .letter {
+            font-size: 90px;
+            font-family: 'Pacifico', cursive;
+            display: inline-block;
+            color: #999;
+            transition: all 250ms ease-in-out;
+        }
+
+        .letter.active {
+            transform: scale(1.5) rotate(20deg);
+            color: green;
+        }
+    </style>
+
+</head>
+<body>
+
+    <h1>Final Project</h1>
+
+    <script>
+
+        const h1 = document.querySelector("h1")
+        const letters = h1.innerText.split('')
+        let html = ""
+
+        letters.forEach(letter => {
+            let classes = ''
+            if(letter !== ' ') {
+                classes = 'letter js-letter'
+            }
+            html = html + `<span class='${classes}'>${letter}</span>`
+        })
+
+        h1.innerHTML = html
+        const jsLetters = document.querySelectorAll(".js-letter")
+        jsLetters.forEach(node => {
+            node.addEventListener("mouseover", function(event) {
+                this.classList.add("active")
+            })
+            node.addEventListener("mouseout", function(event) {
+                this.classList.remove("active")
+            })
+        })
+    </script>
+
+    <!--
+        Teacher:    Kalob Taulien
+        Twitter:    @KalobTaulien
+        Website:    Codingforeverybody.com/javascript-for-beginners
+    -->
+
+</body>
+</html>

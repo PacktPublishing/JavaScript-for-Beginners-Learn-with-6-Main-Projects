@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Arrow Functions</title>
+</head>
+<body>
+
+    <h1>Arrow Functions</h1>
+
+    <script>
+
+        const arr = ["JavaScript", "Python", "PHP"]
+
+        arr.forEach(language => {
+            console.log(language)
+        });
+
+        setTimeout(() => {
+            console.log("YAY I WAITED")
+            console.log("YAY I WAITED")
+            console.log("YAY I WAITED")
+            console.log("YAY I WAITED")
+            console.log("YAY I WAITED")
+            console.log("YAY I WAITED")
+            console.log("YAY I WAITED")
+            console.log("YAY I WAITED")
+            console.log("YAY I WAITED")
+            console.log("YAY I WAITED")
+        }, 3000)
+
+
+        greet = (name, place) => `Hello ${name} ${place}`
+
+        const hi = greet("Henry", "Canada")
+        console.log(hi)
+
+        function greet(name, place) {
+            this.name = "name"
+            console.log(this.name)
+            return "Hello " + name + " " + place;
+        }
+
+
+    </script>
+
+    <!--
+        Teacher:    Kalob Taulien
+        Twitter:    @KalobTaulien
+        Website:    Codingforeverybody.com/javascript-for-beginners
+    -->
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Query Selector</title>
+</head>
+<body>
+
+    <!-- <small>This one is first</small> -->
+
+    <!-- <h1 class="title">
+        Hello World, this is the title.
+        <small>Change me, too!</small>
+    </h1>
+
+    <a href="#">Change Link Text</a> -->
+
+     <ul>
+        <li>Number 1</li>
+        <li>Number 2</li>
+        <li>Number 3</li>
+        <li>Number 4</li>
+        <li>Number 5</li>
+        <li>Number 6</li>
+        <li>Number 7</li>
+    </ul>
+
+    <script>
+        var lis = document.querySelectorAll("li")
+    </script>
+
+
+    <input type="text" style='padding: 30px; font-size: 30px;' class="form-control" value="hihihihihiihih">
+
+
+    <script>
+        var input = document.querySelector(".form-control")
+        console.log(input.value)
+    </script>
+
+
+    <script>
+
+        var title = document.querySelector(".title")
+        title.innerText = "Changed using a class"
+        var small = document.querySelector("small")
+        small.innerText = "WOW IM TINY TEXT"
+
+        var small = title.querySelector("small")
+        small.innerText = "WOWOWWOWOWOWW"
+
+        var a = document.querySelector("a")
+        a.innerText = "Coding For Everybody.com"
+
+    </script>
+
+    <!--
+        Teacher:    Kalob Taulien
+        Twitter:    @KalobTaulien
+        Website:    Codingforeverybody.com/javascript-for-beginners
+    -->
+
+</body>
+</html>
